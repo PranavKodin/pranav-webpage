@@ -11,3 +11,13 @@ document.querySelectorAll('.socialmediaico i').forEach(icon => {
         hoverSound.play();
     });
 });
+const playSound = () => {
+    const hoverSound = document.getElementById('buttonclickSound');
+    hoverSound.currentTime = 0; // Reset to start
+    hoverSound.play();
+};
+
+document.querySelectorAll('.socialmediaico i, button').forEach(element => {
+    element.addEventListener('click', playSound);
+});
+
