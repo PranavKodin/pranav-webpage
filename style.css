@@ -188,6 +188,10 @@ h6 {
   transform: scale(1.1); 
 }
 
+.card .cta-button:hover {
+   box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+}
+
 .social_media {
   display: flex;
   justify-content: center;
@@ -205,4 +209,23 @@ h6 {
 .social_media a:hover {
   color: #ff5e57; 
   transform: scale(1.2); 
+}
+
+.nav-button {
+  display: block;
+  width: 100px;
+  margin: 10px auto 20px;
+  padding: 10px;
+  background-color: #ff5e57;
+  color: white;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+} 
+
+.nav-button:hover {
+  background-color: #f06d06;
+  transform: scale(1.1);
 }
