@@ -16,11 +16,33 @@ body {
 
 #header {
     text-align: center;
+    text-transform: capitalize;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 50px 20px;
     background: linear-gradient(45deg, rgba(30, 30, 30, 0.8), rgba(0, 0, 0, 0.8));
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     position: relative;
 
+}
+
+h1 {
+    text-transform: capitalize;
+    font-size: 48px;
+    letter-spacing: 5px;
+    color: antiquewhite;
+    margin: 0;
+    animation: spacing 2s ;
+}
+
+@keyframes spacing {
+    0% {
+        letter-spacing: 0;
+        color: rgba(240, 248, 255, 0);
+    }
+    100% {
+        letter-spacing: 5px;
+        color: aliceblue;
+    }
 }
 #card {
     background-color: pink;
