@@ -8,34 +8,51 @@
 </head>
 <body>
     <div id="overview">
-        <div class="random-heading" id="header">PORTFOLIO</div>
+        <div id="header"><h1>PORTFOLIO</h1></div>
         <div id ="main">
-            <div id="card"></div>
+            <div id="card">
                     <div class="card" style="background-color: #FF5733;">Card 1</div>
                     <div class="card" style="background-color: #33FF57;">Card 2</div>
                     <div class="card" style="background-color: #3357FF;">Card 3</div>
-                    <div class="card" style="background-color: #F3FF33;">Card 4</div>  
+                    <div class="card" style="background-color: #F3FF33;">Card 4</div>
+            </div> 
             <div id="footer"></div>
         </div>
     </div>
     <script>
         const cards = document.querySelectorAll('.card');
         const container = document.querySelector('#card');
-        const positions = [
-            { top: '10%', left: '10%' },
-            { top: '10%', left: '60%' },
-            { top: '60%', left: '10%' },
-            { top: '60%', left: '60%' },
-        ];
+        const minDistance = 60; // Minimum distance between cards
 
-        cards.forEach((card, index) => {
-            // Set random initial positions within the container
+        function getRandomPosition() {
             const containerRect = container.getBoundingClientRect();
             const randomLeft = Math.random() * (containerRect.width - 150); // Card width
             const randomTop = Math.random() * (containerRect.height - 200); // Card height
+            return { left: randomLeft, top: randomTop };
+        }
 
-            card.style.left = randomLeft + 'px';
-            card.style.top = randomTop + 'px';
+        function isOverlapping(card, otherCards) {
+            const cardRect = card.getBoundingClientRect();
+            return Array.from(otherCards).some(otherCard => {
+                if (card === otherCard) return false; // Skip itself
+                const otherCardRect = otherCard.getBoundingClientRect();
+
+                return !(
+                    cardRect.right + minDistance < otherCardRect.left ||
+                    cardRect.left - minDistance > otherCardRect.right ||
+                    cardRect.bottom + minDistance < otherCardRect.top ||
+                    cardRect.top - minDistance > otherCardRect.bottom
+                );
+            });
+        }
+
+        cards.forEach((card, index) => {
+            let position;
+            do {
+                position = getRandomPosition();
+                card.style.left = position.left + 'px';
+                card.style.top = position.top + 'px';
+            } while (isOverlapping(card, cards)); // Ensure no overlapping
 
             // Append to container
             container.appendChild(card);
@@ -43,9 +60,15 @@
             // Trigger the animation after a slight delay
             setTimeout(() => {
                 // Move to the original position
-                const position = positions[index];
-                card.style.transform = `translate(${position.left}, ${position.top})`;
-                card.style.opacity = '1';
+                const originalPosition = [
+                    { left: '10%', top: '10%' },
+                    { left: '60%', top: '10%' },
+                    { left: '10%', top: '60%' },
+                    { left: '60%', top: '60%' },
+                ][index];
+
+                card.style.transform = `translate(${originalPosition.left}, ${originalPosition.top})`;
+                card.style.opacity = '1'; // Fade in
             }, 100 * index); // Stagger the start times for a smoother effect
         });
     </script>

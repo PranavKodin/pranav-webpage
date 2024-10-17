@@ -1,19 +1,18 @@
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(45deg, rgba(30, 30, 30, 0.8), rgba(0, 0, 0, 0.8));
-  overflow-x: hidden;
-  }
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, rgba(30, 30, 30, 0.8), rgba(0, 0, 0, 0.8));
+    overflow-x: hidden;
+    background-color: rgba(165, 42, 42, 0);
+    background-image:url(download.gif);
+    background-size: 100% 100%;
+}
 
 
 
 #main { 
-    background-color: rgb(165, 42, 42);
-    background-image:url(download.gif);
-    background-size: 100% 100%;
     height: auto;
     padding: 20px;
-
 }
 
 
@@ -22,25 +21,36 @@ body {
     text-transform: capitalize;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 50px 20px;
-    background: linear-gradient(45deg, rgba(30, 30, 30, 0.8), rgba(0, 0, 0, 0.8));
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     position: relative;
-
+    background-color: rgba(0, 0, 0, 0.362);
+    margin: 40px 40px auto 40px;
+    border-radius: 10px;
+    height: fit-content;
 }
 
 h1 {
     text-transform: capitalize;
     font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
     letter-spacing: 5px;
     color: antiquewhite;
     margin: 0;
     animation: spacing 2s ;
 }
 
+.card:hover {
+    transform: translate(5px, -5px); /* Moves the card slightly to the right and up */
+}
+
+
+
 #card {
     background-color: rgba(0, 0, 0, 0.362);
     border: 8px ;
-    padding: 20px;
+    padding: left 150px;
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
@@ -49,8 +59,8 @@ h1 {
     width: auto;
 }
 .card {
-    width: 150px;
-            height: 200px;
+            width: 300px;
+            height: 125px;
             background-color: #fff;
             color: #000;
             display: flex;
@@ -64,8 +74,8 @@ h1 {
             transition: transform 1s ease, opacity 1s ease; /* Smooth transition */
 }
 #footer {
-    background-color: yellow;
-    height: auto;
+    background-color: rgba(255, 255, 255, 0);
+    height: 40px;
     width: auto;
     text-align: center;
 }
