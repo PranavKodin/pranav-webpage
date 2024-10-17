@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pranav sr style.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div id="overview">
+        <div id="header"><h1>PORTFOLIO</h1></div>
+        <div id ="main">
+            <div id="container">
+                    <div class="card" id="Me">Myself</div>
+                    <div class="card" id="school">Schooling</div>
+                    <div class="card" id="interest">interest</div>
+                    <div class="card" id="languages">languages</div>
+            </div> 
+        </div>
+    </div>
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translate(-50px, -50px)';
+    
+        setTimeout(() => {
+            card.style.transition = 'transform 1s ease-out, opacity 1s ease-out';
+            card.style.transform = 'translate(0, 0)';
+            card.style.opacity = '1';
+                }, index * 200);
+        });
+
+        cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        card.style.transform = `scalex(2) scaley(1.5) translate(${x * -0.2}px, ${y * -0.2}px)`;    
+    });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `translate(0, 0)`;
+            });
+        });
+    </script>
+</body>
+</html>
