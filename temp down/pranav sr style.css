@@ -9,7 +9,10 @@ body {
 
 #main { 
     background-color: rgb(165, 42, 42);
-    height: 100px;
+    background-image:url(download.gif);
+    background-size: 100% 100%;
+    height: auto;
+    padding: 20px;
 
 }
 
@@ -34,6 +37,30 @@ h1 {
     animation: spacing 2s ;
 }
 
+#card {
+    background-color: rgba(0, 0, 0, 0.362);
+    border: 8px ;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    position: relative;
+    height: 456px;
+    width: auto;
+}
+
+#footer {
+    background-color: yellow;
+    height: auto;
+    width: auto;
+    text-align: center;
+}
+
+#content {
+    background-color: orchid;
+
+}
+
 @keyframes spacing {
     0% {
         letter-spacing: 0;
@@ -43,15 +70,4 @@ h1 {
         letter-spacing: 5px;
         color: aliceblue;
     }
-}
-#card {
-    background-color: pink;
-}
-
-#footer {
-    background-color: yellow;
-}
-
-#content {
-    background-color: orchid;
 }
