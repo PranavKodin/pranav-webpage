@@ -48,7 +48,7 @@ h1 {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     height: 455px;
     width: auto;
-    position: relative; /* Relative to contain the abso lutely positioned cards */
+    position: relative; /* Relative to contain theabso lutely positioned cards */
 }
 
 .card {
