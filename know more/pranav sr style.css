@@ -1,52 +1,40 @@
+/* Default layout for desktop (random card positions) */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(45deg, rgba(30, 30, 30, 0.8), rgba(0, 0, 0, 0.8));
     overflow-x: hidden;
-    background-color: rgba(165, 42, 42, 0);
-    background-image:url(download.gif);
-    background-size: 100% 100%;
+    background-image: url(download.gif);
+    background-size: cover;
 }
 
-
-
-#main { 
+#main {
     height: auto;
-    padding: 20px;
 }
-
 
 #header {
     text-align: center;
     text-transform: capitalize;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 50px 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    position: relative;
     background-color: rgba(0, 0, 0, 0.362);
-    margin: 40px 40px auto 40px;
+    margin: 20px;
     border-radius: 10px;
     height: fit-content;
 }
 
 #header h1 {
-    text-transform: capitalize;
     font-size: 48px;
-    text-align: center;
-    letter-spacing: 10px;
     color: aliceblue;
     margin: 0;
-    animation: spacing 2s ;
+    letter-spacing: 10px;
+    animation: spacing 2s;
 }
 
 .card h1 {
     font-size: 24px;
     color: aliceblue;
-    position: relative;
-    top: 50%;
-
     text-align: center;
-    margin: 0;
 }
 
 #container {
@@ -61,6 +49,7 @@ body {
     position: relative;
 }
 
+/* Positioning cards randomly for desktop */
 .card {
     width: 300px;
     height: 125px;
@@ -68,70 +57,56 @@ body {
     backdrop-filter: blur(5px);
     margin: 20px;
     border-radius: 10px;
-    cursor:crosshair;
-    opacity: 0;
+    cursor: crosshair;
+    opacity: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: absolute; 
+    position: absolute; /* Random positioning for desktop */
     transition: transform 1s;
 }
-#me p {
-    color: blue;
-    z-index: 1;
-}
 
-#Me:hover {
-    background-image: url(siuu.gif);
-    background-size: 100% 100%;
-    filter: blur(2px);
-}
-
-#school:hover {
-    background-image: url(sea.gif);
-    background-size: 100% 100%;
-    filter: blur(2px);
-}
-
-#interest:hover {
-    background-image: url(feen.gif);
-    background-size: 100% 100%;
-    filter: blur(2px);
-}
-
-#languages:hover {
-    background-image: url(vroom.gif);
-    background-size: 100% 100%;
-    filter: blur(2px);
-    z-index: 0;
-}
-
-.card:hover h1 {
-    color: rgba(0, 0, 0, 0);}
-    p {
-        opacity: 1;
-    }
-
-
+/* Example random card positions */
 #Me {   
     left: 300px;
     top: 150px;
-    animation-delay: 1s;
 }
 
 #school {
     left: 750px;
     top: 250px;
-    animation-delay: 0.4s;}
+}
 
 #interest {
     left: 400px;
     top: 300px;
-    animation-delay: 0.6s;
 }
 
 #languages {
     left: 900px;
     top: 100px;
-    animation-delay: 0.8s;
+}
+
+#Me:hover {
+    background-image: url(siuu.gif);
+    background-size: cover; /* Change to cover */;
+    filter: blur(1px);
+}
+
+#school:hover {
+    background-image: url(sea.gif);
+    background-size: cover; /* Change to cover */
+    filter: blur(1px);
+}
+
+#interest:hover {
+    background-image: url(feen.gif);
+    background-size: cover; /* Change to cover */
+    filter: blur(1px);
+}
+
+#languages:hover {
+    background-image: url(vroom.gif);
+    background-size: cover; /* Change to cover */
+    filter: blur(1px);
 }
 
 @keyframes spacing {
@@ -142,5 +117,34 @@ body {
     100% {
         letter-spacing: 10px;
         color: aliceblue;
+    }
+}
+.card:hover h1 {
+    color: rgba(0, 0, 0, 0);
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+    #container {
+        display: flex;
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+        justify-content: center;
+        height: auto; /* Adjust height based on content */
+        position: relative; /* Remove relative positioning */
+    }
+
+    .card {
+        position: static; /* Remove absolute positioning on mobile */
+        width: 90%; /* Full width for mobile */
+        max-width: 350px; /* Set max width */
+        margin: 10px 0;
+        height: auto; /* Let the height adjust based on content */
+    }
+
+
+    #header h1 {
+        font-size: 36px; /* Adjust font size for mobile */
+        letter-spacing: 5px;
     }
 }
