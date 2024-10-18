@@ -29,7 +29,7 @@ body {
     height: fit-content;
 }
 
-h1 {
+#header h1 {
     text-transform: capitalize;
     font-size: 48px;
     text-align: center;
@@ -37,6 +37,16 @@ h1 {
     color: aliceblue;
     margin: 0;
     animation: spacing 2s ;
+}
+
+.card h1 {
+    font-size: 24px;
+    color: aliceblue;
+    position: relative;
+    top: 50%;
+
+    text-align: center;
+    margin: 0;
 }
 
 #container {
@@ -58,23 +68,59 @@ h1 {
     backdrop-filter: blur(5px);
     margin: 20px;
     border-radius: 10px;
+    cursor:crosshair;
     opacity: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: absolute; 
-    transition: transform 50ms ease;
+    transition: transform 1s;
 }
+#me p {
+    color: blue;
+    z-index: 1;
+}
+
+#Me:hover {
+    background-image: url(siuu.gif);
+    background-size: 100% 100%;
+    filter: blur(2px);
+}
+
+#school:hover {
+    background-image: url(sea.gif);
+    background-size: 100% 100%;
+    filter: blur(2px);
+}
+
+#interest:hover {
+    background-image: url(feen.gif);
+    background-size: 100% 100%;
+    filter: blur(2px);
+}
+
+#languages:hover {
+    background-image: url(vroom.gif);
+    background-size: 100% 100%;
+    filter: blur(2px);
+    z-index: 0;
+}
+
+.card:hover h1 {
+    color: rgba(0, 0, 0, 0);}
+    p {
+        opacity: 1;
+    }
+
 
 #Me {   
     left: 300px;
     top: 150px;
-    animation-delay: 0.2s;
+    animation-delay: 1s;
 }
 
 #school {
     left: 750px;
     top: 250px;
-    animation-delay: 0.4s;
-}
+    animation-delay: 0.4s;}
 
 #interest {
     left: 400px;

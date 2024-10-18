@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pranav sr style.css"/>
-    <title>Document</title>
+    <title>Portfolio</title>
 </head>
 <body>
     <div id="overview">
         <div id="header"><h1>PORTFOLIO</h1></div>
         <div id ="main">
             <div id="container">
-                    <div class="card" id="Me">Myself</div>
-                    <div class="card" id="school">Schooling</div>
-                    <div class="card" id="interest">interest</div>
-                    <div class="card" id="languages">languages</div>
+                    <div class="card" id="Me"><h1>Myself</h1><p>The HTML  element defines a paragraph. A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after ...</div>
+                    <div class="card" id="school"><h1>Schooling</h1></div>
+                    <div class="card" id="interest"><h1>interest</h1></div>
+                    <div class="card" id="languages"><h1>languages</h1></div>
             </div> 
         </div>
     </div>
     <script>
         const cards = document.querySelectorAll('.card');
+        const container = document.querySelectorAll('#container');
 
         cards.forEach((card, index) => {
         card.style.opacity = '0';
@@ -32,19 +33,42 @@
                 }, index * 200);
         });
 
-        cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
+// Effect 1: Move individual cards when hovering over them
+cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left - rect.width / 2;
         const y = e.clientY - rect.top - rect.height / 2;
 
-        card.style.transform = `scalex(2) scaley(1.5) translate(${x * -0.2}px, ${y * 0.3}px)`;    
+        // Slightly move the card based on cursor position
+        card.style.transform = `scalex(2) scaley(2) translate(${x * -0.2}px, ${y * 0.3}px)`;   
     });
 
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = `translate(0, 0)`;
-            });
-        });
+    card.addEventListener('mouseleave', () => {
+        // Reset the card position when the mouse leaves
+        card.style.transform = `translate(0, 0)`;
+    });
+});
+
+// Effect 2: Move all cards based on the cursor's movement in the container
+container.addEventListener('mousemove', (e) => {
+    const rect = container.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    // Apply transformation to all cards based on container's cursor position
+    cards.forEach(card => {
+        card.style.transform += ` translate(${x * -0.1}px, ${y * 0.1}px)`;    
+    });
+});
+
+container.addEventListener('mouseleave', () => {
+    // Reset the transformation on each card when the mouse leaves the container
+    cards.forEach(card => {
+        card.style.transform = `translate(0, 0)`;
+    });
+});
+
     </script>
 </body>
 </html>
