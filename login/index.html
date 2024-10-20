@@ -9,11 +9,11 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form action="/action">
                 <h1>Create Account</h1>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input type="text" placeholder="Name" id="name"/>
+                <input type="email" placeholder="Email" id="email"/>
+                <input type="password" placeholder="Password" id="pass"/>
                 <button>SIGN UP</button>
             </form>
         </div>
@@ -43,18 +43,6 @@
         </div>
     </div>
 
-    <script>
-        const signUpButton = document.getElementById('signUp');
-        const loginButton = document.getElementById('login');
-        const container = document.getElementById('container');
-
-        signUpButton.addEventListener('click', () => {
-            container.classList.remove('right-panel-active');
-        });
-
-        loginButton.addEventListener('click', () => {
-            container.classList.add('right-panel-active');
-        });
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
