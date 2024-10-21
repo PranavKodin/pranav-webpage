@@ -21,3 +21,10 @@ document.querySelectorAll('.socialmediaico i, button').forEach(element => {
     element.addEventListener('click', playSound);
 });
 
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active');
+}
+
+var btn = $('check');
+
