@@ -69,45 +69,53 @@ body {
 #Me {   
     left: 300px;
     top: 150px;
+    z-index: 0;
 }
 
 #school {
     left: 750px;
     top: 250px;
+    z-index: 0;
 }
 
 #interest {
     left: 400px;
     top: 300px;
+    z-index: 0;
 }
 
 #languages {
     left: 900px;
     top: 100px;
+    z-index: 0;
 }
 
 #Me:hover {
     background-image: url(siuu.gif);
     background-size: cover; /* Change to cover */;
     filter: blur(1px);
+    z-index: 1;
 }
 
 #school:hover {
     background-image: url(sea.gif);
     background-size: cover; /* Change to cover */
     filter: blur(1px);
+    z-index: 1;
 }
 
 #interest:hover {
     background-image: url(feen.gif);
     background-size: cover; /* Change to cover */
     filter: blur(1px);
+    z-index: 1;
 }
 
 #languages:hover {
     background-image: url(vroom.gif);
     background-size: cover; /* Change to cover */
     filter: blur(1px);
+    z-index: 1;
 }
 
 @keyframes spacing {
