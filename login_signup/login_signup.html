@@ -177,7 +177,7 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form id="signup-form" action="/signup" method="POST"> <!-- Removed action attribute -->
+            <form id="signup-form" action="process_signup.php" method="POST"> <!-- Removed action attribute -->
                 <h1>Create Account</h1>
                 <input type="text" placeholder="Name" id="name" name="name" required />
                 <input type="email" placeholder="Email" id="email" name="email" required />
@@ -187,7 +187,7 @@
         </div>
 
         <div class="form-container login-container">
-            <form id="login-form" action="/login" method="POST"> <!-- Added ID for JavaScript handling -->
+            <form id="login-form" action="process_login.php" method="POST"> <!-- Added ID for JavaScript handling -->
                 <h1>Login</h1>
                 <input type="email" placeholder="Email" id="login-email" name="email" required />
                 <input type="password" placeholder="Password" id="login-password" name="password" required />
