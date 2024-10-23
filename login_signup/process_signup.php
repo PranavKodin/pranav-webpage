@@ -17,13 +17,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $pass = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
-    $sql = "INSERT INTO users (username, email, password) VALUES ('$user', '$email', '$pass')";
-    
-    if ($conn->query($sql) === TRUE) {
-        echo "Signup successful!";
+    // Prepare and bind
+    $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $user, $email, $pass);
+
+    // Execute the statement
+    if ($stmt->execute()) {
+        // If the signup was successful, redirect to index.html
+        header("Location: /pranav-webpage/index.html");
+        exit(); // Always call exit after header redirection
     } else {
-        echo "Error: " . $conn->error;
+        echo "Error: " . $stmt->error; // Display the error message
     }
+
+    // Close the statement
+    $stmt->close();
 }
+
+// Close the connection
 $conn->close();
 ?>
+
