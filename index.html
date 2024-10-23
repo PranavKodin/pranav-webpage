@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pranav's Website</title>
-  <link rel="icon" href="me.jpg" type="image/x-icon">
-  <link rel="shortcut icon" href="me.jpg" type="image/x-icon">
-  <link rel="icon" type="image/png" href="me.jpg">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="static/images/me.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="static/images/me.jpg" type="image/x-icon">
+  <link rel="icon" type="image/png" href="static/images/me.jpg">
+  <link rel="stylesheet" href="static/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H72L8XEPB4"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-H72L8XEPB4');
-</script>
+    gtag('config', 'G-H72L8XEPB4');
+  </script>
 </head>
+
 <body>
   <div id="loginbanner">
     <div id="button_holder">
-      <div id="menu-button" onclick="toggleSidebar()"><img src="https://cdn-icons-png.flaticon.com/128/10440/10440660.png"></div>
-      <button class="nav-button" onclick="window.location.href='/login/'">  LOGIN  </button>
-    </div>  
+      <div id="menu-button" onclick="toggleSidebar()"><img
+          src="https://cdn-icons-png.flaticon.com/128/10440/10440660.png"></div>
+      <button class="nav-button" onclick="window.location.href='./login_signup/login_signup.html'"> LOGIN </button>
+    </div>
   </div>
   <div class="hero">
     <h2><i>Hey guys, Welcome to the</i></h2>
@@ -39,56 +42,64 @@
   </div>
 
   <div id="sidebar">
-    <h2>Conatct on Mail</h2>
+    <h2>Contact on Mail</h2>
     <form action="process_form.php" method="POST">
       <input type="text" id="name" name="name" placeholder="Your Name" required>
-
       <input type="email" id="email" name="email" placeholder="Your Email" required>
-
       <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-
       <button type="submit" class="cta-button">SEND</button>
     </form>
   </div>
-    
+
   <div id="pets">
     <div class="card" id="left">
-      <img src="dog.jpg" alt="Jerry" />
+      <img src="static/images/dog.jpg" alt="Jerry" />
       <h3>Pranav Senior</h3>
-      <p>Just completed my schooling from <a href="https://www.crpfpsdwarka.in/">CRPF Public School Dwarka</a> and learned HTML, CSS & JavaScript with Python, Big fan of Tony Stark chacha aur pure MARVEL universe ka bhi    😎😎</p>
-      <a href="./know more/index.html"><button class="cta-button" onclick="">Know More</button></a> 
+      <p>Just completed my schooling from <a href="https://www.crpfpsdwarka.in/">CRPF Public School Dwarka</a> and
+        learned HTML, CSS & JavaScript with Python, Big fan of Tony Stark chacha aur pure MARVEL universe ka bhi 😎😎
+      </p>
+      <button class="cta-button" onclick="window.location.href='./know more/know_more.html'"> LOGIN </button>
     </div>
     <div class="card" id="right">
-      <img src="cat.jpg" alt="Tom" />
+      <img src="static/images/cat.jpg" alt="Tom" />
       <h3>Pranav Junior</h3>
-      <p>It’s been 4 years since I was welcomed to Earth; life was all happy until they started making me prepare for JEE! Fir toh lagne laga jaise duniya mein sirf padhai aur 'battiyan' hain! 😳</p>
+      <p>It’s been 4 years since I was welcomed to Earth; life was all happy until they started making me prepare for
+        JEE! Fir toh lagne laga jaise duniya mein sirf padhai aur 'battiyan' hain! 😳</p>
       <button class="cta-button">More about past</button>
     </div>
   </div>
-  <br/>
-  <h4>kyaa hi velle log ho iss website pe aaye</h4>
-  <h6>ab aa hi gaye to contact me on follwing platforms</h6>
-
+  <br />
+  <div id="lines">
+    <h4>kyaa hi velle log ho iss website pe aaye</h4>
+    <h6>ab aa hi gaye to contact me on follwing platforms</h6>
+  </div>
   <div class="social_media">
     <ul class="socialmediaico">
       <a href="https://www.facebook.com/hey.mahodaye/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
       <a href="https://x.com/pranavk38351492" target="_blank"><i class="fa-brands fa-twitter"></i></a>
       <a href="https://www.instagram.com/hey.mahodaye" target="_blank"><i class="fa-brands fa-instagram"></i></a>
       <a href="https://www.youtube.com/@jarvisff933" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-      <a href="https://www.linkedin.com/in/pranav-kumar-a3178530a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.linkedin.com/in/pranav-kumar-a3178530a/" target="_blank"><i
+          class="fa-brands fa-linkedin"></i></a>
       <a href="https://github.com/PranavKodin/" target="_blank"><i class="fa-brands fa-github"></i></a>
       <a href="https://www.reddit.com/user/wtf_pranav/" target="_blank"><i class="fa-brands fa-reddit"></i></a>
-      <a href="https://www.snapchat.com/add/wtf-pranav?share_id=vyrwKxcTeuA&locale=en-IN" target="_blank"><i class="fa-brands fa-snapchat"></i></a>
+      <a href="https://www.snapchat.com/add/wtf-pranav?share_id=vyrwKxcTeuA&locale=en-IN" target="_blank"><i
+          class="fa-brands fa-snapchat"></i></a>
       <a href="https://discord.com/users/733690477148373093" target="_blank"><i class="fa-brands fa-discord"></i></a>
     </ul>
   </div>
-  
-  <style> a {color: rgb(255, 255, 255);}</style>
-  <audio id="hoverSound" src="sound.mp3" preload="auto"></audio>
-  <audio id="socialmediahoverSound" src="socialmediahover.wav" preload="auto"></audio>
-  <audio id="buttonclickSound" src="click.mp3" preload="auto"></audio>
-  <script src="script.js"></script>
+
+  <style>
+    a {
+      color: rgb(255, 255, 255);
+    }
+  </style>
+  <audio id="hoverSound" src="static/sounds/sound.mp3" preload="auto"></audio>
+  <audio id="socialmediahoverSound" src="static/sounds/socialmediahover.wav" preload="auto"></audio>
+  <audio id="buttonclickSound" src="static/sounds/click.mp3" preload="auto"></audio>
+  <script src="static/js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 </body>
+
 </html>
