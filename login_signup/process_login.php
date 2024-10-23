@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root"; // Change if necessary
-$password = ""; // Change if necessary
+$password = "scout"; // Change if necessary
 $dbname = "pranav_web";
 
 // Create connection
