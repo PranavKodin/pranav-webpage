@@ -91,16 +91,20 @@ h2 {
     transform: translateY(0);
   }
 }
-
+.typewriter {
+  display: flex;
+  justify-content: center;
+}
 h1 {
   font-size: 3rem;
+  font-family:monospace;
+  margin-inline: auto;
+  white-space: nowrap;
   color: white;
   font-weight: bold;
-  display: inline-block;
   overflow: hidden;
-  white-space: nowrap;
   border-right: 4px solid #ff5e57;
-  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+  animation: typing 4s steps(30), blink-caret 0.75s step-end infinite;
 }
 
 .hover-effect {
@@ -418,27 +422,105 @@ textarea:focus {
   animation-range: entry 0%;
 }
 
-@keyframes textappear {
-  from {
-    opacity: 0;
-    filter: blur(5px);
-  }
 
-  to {
-    opacity: 1;
-    filter: blur(0px);
-  }
-}
-
-#lines {
-  position: 10PX;
-  animation: textappear 2s linear;
-  animation-timeline: view();
-  animation-range: entry 0%;
-}
 
 h6 {
-  animation: textappear 2s linear;
+  animation: textappear 5s linear;
   animation-timeline: view();
   animation-range: entry 0%;
+}
+
+.text-container {
+  font-size: 3rem;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap: wrap;
+  opacity: 1; /* Initially hidden */
+}
+
+.char {
+  opacity: 1;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+
+
+.char:nth-child(1) { 
+  animation: fadeIn 5s linear;
+  animation-timeline: view();
+  animation-range: entry 40%;
+}
+
+.char:nth-child(2) {
+  animation: fadeIn 10s linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+}
+
+.char:nth-child(3) {
+  animation: fadeIn 15s linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+}
+
+.char:nth-child(4) {
+  animation: fadeIn 20s linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+}
+
+.char:nth-child(5) {
+  animation: fadeIn 25s linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
+}
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      filter: blur(5px);
+  }
+  to {
+      opacity: 1;
+      filter: blur(0px);
+  }
+}
+
+#orange {
+  color: #ff5e57;
+}
+
+#white {
+  color: #ffffff;
+}
+.scroll-container {
+  cursor:default;
+  display: flex;
+  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0px;
+}
+.english-french {
+  animation: scroll-left 20s linear infinite;
+}
+.hindi-japanese {
+  color: #D40078;
+  animation: scroll-right 20s linear infinite;
+}
+.scroll-text {
+  display: inline-block;
+  
+}
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+@keyframes scroll-right {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
 }
