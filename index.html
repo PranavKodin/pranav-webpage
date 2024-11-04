@@ -39,41 +39,94 @@
         <span class="hover-effect highlight">of</span>
         <span class="hover-effect">Pranav</span>
         <span class="hover-effect">Kumar.</span>
-    </h1>
+      </h1>
+    </div>
+  </div>
+  <div id="sidebar">
+    <h2>Contact on Mail</h2>
+    <form action="process_form.php" method="POST">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="cta-button">SEND</button>
+    </form>
   </div>
 
   <div id="pets">
     <div class="card" id="left">
-      <img src="dog.jpg" alt="Jerry" />
+      <img src="static/images/dog.jpg" alt="Jerry" />
       <h3>Pranav Senior</h3>
-      <p>bada ho gya hun abto mai isme kaafi aur waise toh cool toh hun hi. 😎😎</p>
-      <button class="cta-button">Noice I know</button>
+      <p>Just completed my schooling from <a href="https://www.crpfpsdwarka.in/">CRPF Public School Dwarka</a> and
+        learned HTML, CSS & JavaScript with Python, Big fan of Tony Stark chacha aur pure MARVEL universe ka bhi 😎😎
+      </p>
+      <button class="cta-button" onclick="window.location.href='./know more/know_more.html'"> KNOW MORE </button>
     </div>
     <div class="card" id="right">
-      <img src="cat.jpg" alt="Tom" />
+      <img src="static/images/cat.jpg" alt="Tom" />
       <h3>Pranav Junior</h3>
-      <p>Meet him pranav from 2009 cute toh tha ye bacha dekho kitna innocent 😳🥰</p>
-      <button class="cta-button">Hn cute toh hai</button>
+      <p>It’s been 4 years since I was welcomed to Earth; life was all happy until they started making me prepare for
+        JEE! Fir toh lagne laga jaise duniya mein sirf padhai aur 'battiyan' hain! 😳</p>
+      <button class="cta-button">More about past</button>
     </div>
   </div>
-  <br/>
-  <h4>kyaa hi velle log ho iss website pe aaye</h4>
-  <button class="cta-button nav-button" onclick="window.location.href='/login/'">LOGIN</button>
-  <h6>ab aa hi gaye to contact me on follwing platforms</h6>
+  <br />
+  <!-- English and French Heading -->
+  <div class="scroll-container english-french">
+    <div class="scroll-text">
+      <span id="orange">Bienvenue sur la page web ! • </span><span id="white">Добро
+        пожаловать на веб-страницу! • </span><span id="orange">Welcome to the webpage! • </span><span
+        id="white">Bienvenue
+        sur la page web ! • </span><span id="orange">Добро пожаловать на веб-страницу! • </span><span id="white">Welcome
+        to
+        the webpage! • </span><span id="orange">Bienvenue sur la page web ! • </span><span id="white">Добро пожаловать
+        на
+        веб-страницу! • </span><span id="orange">Welcome to the webpage! • </span><span id="white">Bienvenue sur la page
+        web
+        ! • </span>
+    </div>
+  </div>
+  <div class="scroll-container hindi-japanese">
+    <div class="scroll-text">
+      <span id="orange">ウェブページへようこそ！ • </span><span id="white">مرحبًا بك في صفحة
+        الويب! • </span><span id="orange">वेबपेज पर आपका स्वागत है! • </span><span id="white">ウェブページへようこそ！ •
+      </span><span id="orange">مرحبًا بك في صفحة الويب! • </span><span id="white">वेबपेज पर आपका स्वागत है! •
+      </span><span id="orange">ウェブページへようこそ！ • </span><span id="white">مرحبًا بك في صفحة الويب! • </span><span
+        id="orange">वेबपेज पर
+        आपका स्वागत है! • </span><span id="white">ウェブページへようこそ！ • </span><span id="orange">مرحبًا بك في صفحة الويب! •
+      </span>
 
+    </div>
+  </div>
+  <br />
+  <div id="lines">
+    <h4>kyaa hi velle log ho iss website pe aaye</h4>
+    <h6>ab aa hi gaye to contact me on follwing platforms</h6>
+  </div>
   <div class="social_media">
-    <ul>
-      <a href="https://www.facebook.com/hey.mahodaye/"><i class="fa-brands fa-facebook"></i></a>
-      <a href="https://x.com/pranavk38351492"><i class="fa-brands fa-twitter"></i></a>
-      <a href="https://www.instagram.com/hey.mahodaye"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.youtube.com/@jarvisff933"><i class="fa-brands fa-youtube"></i></a>
-      <a href="https://www.linkedin.com/in/pranav-kumar-a3178530a//"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/PranavKodin/"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.reddit.com/user/wtf_pranav/"><i class="fa-brands fa-reddit"></i></a>
-      <a href="https://www.snapchat.com/add/wtf-pranav?share_id=vyrwKxcTeuA&locale=en-IN"><i class="fa-brands fa-snapchat"></i></a>
-      <a href="https://discord.com/users/733690477148373093"><i class="fa-brands fa-discord"></i></a>
-      <a href="https://open.spotify.com/user/iqgdpyvels8baxblv59afnvaw"><i class="fa-brands fa-spotify"></i></a>
+    <ul class="socialmediaico">
+      <a href="https://www.facebook.com/hey.mahodaye/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://x.com/pranavk38351492" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://www.instagram.com/hey.mahodaye" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@jarvisff933" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.linkedin.com/in/pranav-kumar-a3178530a/" target="_blank"><i
+          class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/PranavKodin/" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.reddit.com/user/wtf_pranav/" target="_blank"><i class="fa-brands fa-reddit"></i></a>
+      <a href="https://www.snapchat.com/add/wtf-pranav?share_id=vyrwKxcTeuA&locale=en-IN" target="_blank"><i
+          class="fa-brands fa-snapchat"></i></a>
+      <a href="https://discord.com/users/733690477148373093" target="_blank"><i class="fa-brands fa-discord"></i></a>
     </ul>
   </div>
+  <style>
+    a {
+      color: rgb(255, 255, 255);
+    }
+  </style>
+  <audio id="hoverSound" src="static/sounds/sound.mp3" preload="auto"></audio>
+  <audio id="socialmediahoverSound" src="static/sounds/socialmediahover.wav" preload="auto"></audio>
+  <audio id="buttonclickSound" src="static/sounds/click.mp3" preload="auto"></audio>
+  <script src="static/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 </body>
 </html>
