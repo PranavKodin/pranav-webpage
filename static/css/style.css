@@ -6,7 +6,7 @@
     overflow-x: hidden;
   }
 
-  #loginbanner {
+  #loginbanner{
     position: fixed;
     width: 100%;
     height: 50px;
@@ -27,13 +27,13 @@
     align-self: center;
   }
 
-  #menu-button #menu{
+  #menu-button #menu {
     position: fixed;
     height: 30px;
     width: 30px;
     top: 10px;
     left: 10px;
-    z-index:  15;
+    z-index: 15;
     transition: .5s ease-out;
   }
 
@@ -91,18 +91,20 @@
       transform: translateY(0);
     }
   }
+
   .typewriter {
     margin: 0%;
     padding: 0px;
     display: flex;
     justify-content: center;
   }
+
   h1 {
     margin: 0%;
     padding: 0px;
     margin-inline: auto;
     font-size: 3rem;
-    font-family:monospace;
+    font-family: monospace;
     white-space: nowrap;
     color: white;
     font-weight: bold;
@@ -152,21 +154,6 @@
     margin-top: 50px;
     padding: 0 20px;
     transition: 0.5s;
-  }
-
-  @media (max-width: 600px) {
-    #pets {
-      flex-direction: column;
-      margin-top: 50px;
-    }
-
-    h1 {
-      font-size: 1rem;
-    }
-
-    .scroll-container {
-      scale:inherit;
-    }
   }
 
   .card {
@@ -360,57 +347,80 @@
     right: 120px;
   }
 
-  #sidebar {
-    width: 250px;
-    /* Width of the sidebar */
+  .sidebar {
     position: fixed;
-    /* Fixes the sidebar */
     top: 0;
-    /* Aligns to the top */
-    left: -290px;
-    /* Initially hidden to the left */
     height: 100%;
-    /* Full height */
     background-color: #3333333e;
-    /* Dark background */
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
     color: white;
-    /* White text color */
     padding: 20px;
-    /* Padding inside the sidebar */
-    transition: left 0.3s ease;
-    /* Animation for sliding */
     z-index: 10;
-    /* Below the menu button */
   }
 
-  #sidebar.active {
+  .menu {
+    width: 250px;
+    left: -290px;
+    transition: left 0.3s ease;
+  }
+
+  .menu.active {
     left: 0;
 
   }
 
-
-  .contact-box form {
-    display: relative;
-    top: 50%;
-    color: #ff5e57;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    position: relative;
-    left: 500px;
-    width: auto;
-    margin: auto;
-    padding: 20px;
-    background-color: #00000000;
+  .comments {
+    width: 300px;
+    right: -350px;
+    transition: right 0.3s ease;
   }
 
-  .contact-box input,
-  textarea {
-    width: 90%;
+  .comments.active {
+    right: 0;
+
+  }
+
+  .comments-container {
+    max-height: 400px;
+    margin: 20px;
+    overflow-y: auto;
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    background-color: #ffffff00;
   }
+
+  /* Custom scrollbar for WebKit browsers (Chrome, Safari) */
+  .comments-container::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+  }
+
+  .comments-container::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    /* Background of the scrollbar track */
+    border-radius: 10px;
+    /* Rounded corners for track */
+  }
+
+  .comments-container::-webkit-scrollbar-thumb {
+    background: #ffcccb;
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    /* Rounded corners for thumb */
+  }
+
+  .comments-container::-webkit-scrollbar-thumb:hover {
+    background: #ff9999;
+    /* Darker color on hover */
+  }
+
+  /* Custom scrollbar for Firefox */
+  .comments-container {
+    scrollbar-width: thin;
+    /* Use 'thin' for thin scrollbars */
+    scrollbar-color: #ffcccb #f5f5f5;
+    /* Thumb color and track color */
+  }
+
 
   input:focus,
   textarea:focus {
@@ -456,17 +466,19 @@
     height: 220px;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     flex-wrap: wrap;
-    opacity: 1; /* Initially hidden */
+    opacity: 1;
+    /* Initially hidden */
   }
+
   .char {
     opacity: 1;
     margin-top: 100px;
     margin-bottom: 100px;
   }
 
-  .char:nth-child(1) { 
+  .char:nth-child(1) {
     animation: fadeIn 5s linear;
     animation-timeline: view();
     animation-range: entry 40%;
@@ -499,12 +511,13 @@
 
   @keyframes fadeIn {
     from {
-        opacity: 0;
-        filter: blur(5px);
+      opacity: 0;
+      filter: blur(5px);
     }
+
     to {
-        opacity: 1;
-        filter: blur(0px);
+      opacity: 1;
+      filter: blur(0px);
     }
   }
 
@@ -515,9 +528,10 @@
   #white {
     color: #ffffff;
   }
+
   .scroll-container {
     position: relative;
-    cursor:default;
+    cursor: default;
     display: flex;
     white-space: nowrap;
     font-size: 2rem;
@@ -525,42 +539,134 @@
     margin: 0px;
     z-index: 0;
   }
+
   .english-french {
     animation: scroll-left 20s linear infinite;
   }
+
   .hindi-japanese {
     color: #D40078;
     animation: scroll-right 20s linear infinite;
   }
+
   .scroll-text {
     display: inline-block;
-    
+
   }
+
   @keyframes scroll-left {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); } }
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 
   @keyframes scroll-right {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(0); } }
+    0% {
+      transform: translateX(-100%);
+    }
 
-    .orbit-text img{
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .orbit-text img {
+    position: fixed;
+    bottom: 20px;
+    left: 50px;
+    width: 125px;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 10s linear infinite;
+    transform-origin: center;
+  }
+
+  .orbit-text img:hover {
+    animation: rotate 2s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (max-width: 600px) {
+    #loginbanner {
+      height: 40px; /* Adjust the height */
+    }
+  
+    #pets {
+      flex-direction: column;
+      margin-top: 20px; /* Reduce margin */
+    }
+  
+    h1 {
+      font-size: 1.5rem; /* Adjust font size for mobile */
+    }
+  
+    .scroll-container {
+      display: none; /* Hide on mobile */
+    }
+  
+    .buymeacoffee {
+      width: 150px; /* Make smaller for mobile */
+      height: 25px; /* Adjust height */
       position: fixed;
-      bottom: 20px;
-      left: 50px;
-      width: 125px;
-      height: 125px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: rotate 10s linear infinite;
-      transform-origin: center;
+      top: 5px; /* Adjust position */
+      right: 10px; /* Adjust position */
+      z-index: 20; /* Ensure visibility */
     }
-    .orbit-text img:hover {
-      animation: rotate 2s linear infinite;
+  
+    .orbit-text img {
+      position: fixed;
+      bottom: 5px; /* Move higher */
+      left: 10px; /* Adjust position */
+      width: 100px; /* Smaller image */
+      height: 100px; /* Smaller image */
     }
-    
-    @keyframes rotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+  
+    .card {
+      width: 90%; /* Full width on mobile */
+      margin: 10px auto; /* Centered margin */
     }
+  
+    .comments {
+      width: 90%; /* Full width on mobile */
+      right: -400px; /* Adjust position */
+    }
+  
+    .comments.active {
+      right: 0; /* Keep as is */
+    }
+
+    .close-comments {
+      align-self: baseline;
+    }
+  
+    .comments-container {
+      max-height: 200px; /* Reduce max height */
+      overflow-y: auto; /* Keep scrollable */
+      padding: 10px;
+      background-color: #ffffff00;
+
+    }
+  
+    h2 {
+      font-size: 1.5rem; /* Adjust for mobile */
+    }
+  
+    h4, h6 {
+      font-size: 1rem; /* Adjust for mobile */
+    }
+  }
