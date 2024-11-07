@@ -6,7 +6,7 @@
     overflow-x: hidden;
   }
 
-  #loginbanner{
+  #loginbanner {
     position: fixed;
     width: 100%;
     height: 50px;
@@ -157,7 +157,7 @@
   }
 
   .card {
-    width: 300px;
+    width: 350px;
     border-radius: 15px;
     overflow: hidden;
     margin: 10px;
@@ -574,22 +574,63 @@
     }
   }
 
-  .orbit-text img {
+  .orbit-text {
     position: fixed;
-    bottom: 20px;
+    bottom: 5px;
     left: 50px;
     width: 125px;
     height: 125px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.orbit-text img {
+    width: 100%;
+    height: 100%;
     animation: rotate 10s linear infinite;
     transform-origin: center;
-  }
+}
 
-  .orbit-text img:hover {
-    animation: rotate 2s linear infinite;
-  }
+.orbit-text img:hover {
+    animation-duration: 2s;
+}
+
+/* Centering and styling the #yt_links element */
+#yt_links {
+    position: absolute;
+    top: -50px;  /* Positioning above the image */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(51, 51, 51, 0.85);
+    white-space: nowrap;
+    padding: 10px 15px;
+    border-radius: 7px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 10;
+}
+
+/* Center arrow on #yt_links */
+#yt_links::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;  /* Positioning arrow below #yt_links */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(51, 51, 51, 0.85);
+}
+
+/* Show #yt_links on .orbit-text hover */
+.orbit-text:hover #yt_links {
+    visibility: visible;
+    opacity: 1;
+}
 
   @keyframes rotate {
     0% {
@@ -603,70 +644,81 @@
 
   @media (max-width: 600px) {
     #loginbanner {
-      height: 40px; /* Adjust the height */
+      height: 40px;
+      /* Adjust the height */
     }
-  
+
     #pets {
       flex-direction: column;
-      margin-top: 20px; /* Reduce margin */
+      margin-top: 20px;
+      /* Reduce margin */
     }
-  
+
     h1 {
-      font-size: 1.5rem; /* Adjust font size for mobile */
+      font-size: 1.5rem;
+      /* Adjust font size for mobile */
     }
-  
+
     .scroll-container {
-      display: none; /* Hide on mobile */
+      display: none;
+      /* Hide on mobile */
     }
-  
+
     .buymeacoffee {
-      width: 150px; /* Make smaller for mobile */
-      height: 25px; /* Adjust height */
+      width: 150px;
+      /* Make smaller for mobile */
+      height: 25px;
+      /* Adjust height */
       position: fixed;
-      top: 5px; /* Adjust position */
-      right: 10px; /* Adjust position */
-      z-index: 20; /* Ensure visibility */
+      top: 5px;
+      /* Adjust position */
+      right: 10px;
+      /* Adjust position */
+      z-index: 20;
+      /* Ensure visibility */
     }
-  
-    .orbit-text img {
-      position: fixed;
-      bottom: 5px; /* Move higher */
-      left: 10px; /* Adjust position */
-      width: 100px; /* Smaller image */
-      height: 100px; /* Smaller image */
-    }
-  
+
     .card {
-      width: 90%; /* Full width on mobile */
-      margin: 10px auto; /* Centered margin */
+      width: 90%;
+      /* Full width on mobile */
+      margin: 10px auto;
+      /* Centered margin */
     }
-  
+
     .comments {
-      width: 90%; /* Full width on mobile */
-      right: -400px; /* Adjust position */
+      width: 90%;
+      /* Full width on mobile */
+      right: -400px;
+      /* Adjust position */
     }
-  
+
     .comments.active {
-      right: 0; /* Keep as is */
+      right: 0;
+      /* Keep as is */
     }
 
     .close-comments {
       align-self: baseline;
     }
-  
+
     .comments-container {
-      max-height: 200px; /* Reduce max height */
-      overflow-y: auto; /* Keep scrollable */
+      max-height: 200px;
+      /* Reduce max height */
+      overflow-y: auto;
+      /* Keep scrollable */
       padding: 10px;
       background-color: #ffffff00;
 
     }
-  
+
     h2 {
-      font-size: 1.5rem; /* Adjust for mobile */
+      font-size: 1.5rem;
+      /* Adjust for mobile */
     }
-  
-    h4, h6 {
-      font-size: 1rem; /* Adjust for mobile */
+
+    h4,
+    h6 {
+      font-size: 1rem;
+      /* Adjust for mobile */
     }
   }

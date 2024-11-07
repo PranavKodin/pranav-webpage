@@ -44,7 +44,7 @@ async function submitComment() {
     }
 
     try {
-        const response = await fetch('http://localhost:5000/api/comments', {
+        const response = await fetch('http://localhost/api/comments', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ async function submitComment() {
 
 async function deleteComment(commentId) {
     try {
-        const response = await fetch(`http://localhost:5000/api/comments/${commentId}`, {
+        const response = await fetch(`http://localhost/api/comments/${commentId}`, {
             method: 'DELETE',
         });
         if (response.ok) {
